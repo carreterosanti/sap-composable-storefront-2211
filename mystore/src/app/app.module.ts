@@ -3,11 +3,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
-import { AppRoutingModule } from '@spartacus/storefront';
-import { AppComponent } from './app.component';
-import { SpartacusModule } from './spartacus/spartacus.module';
-import { environment } from '../environments/environment';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { AppRoutingModule } from '@spartacus/storefront';
+import { environment } from '../environments/environment';
+import { AppComponent } from './app.component';
+import { CoreModule } from './core/core.module';
+import { SpartacusModule } from './spartacus/spartacus.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,6 +22,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
     // NgRx Dev-tools
     ...(environment.production ? [] : [StoreDevtoolsModule.instrument()]),
+
+    CoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
