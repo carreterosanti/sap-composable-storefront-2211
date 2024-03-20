@@ -25,6 +25,7 @@
     "@ngrx/effects": "^17.0.1",
     "@ngrx/router-store": "^17.0.1",
     "@ngrx/store": "^17.0.1",
+    "@ngrx/store-devtools": "^17.1.1",
     "@spartacus/asm": "~2211.19.0-1",
     "@spartacus/assets": "~2211.19.0-1",
     "@spartacus/cart": "~2211.19.0-1",
